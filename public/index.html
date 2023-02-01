@@ -14,7 +14,16 @@
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css"></link>
+
+<script src="dist/notiflix-report-aio-3.2.6.min.js"></script>
+
+<script src="dist/notiflix-confirm-aio-3.2.6.min.js"></script>
+
+<script src="dist/notiflix-loading-aio-3.2.6.min.js"></script>
+
+<script src="dist/notiflix-block-aio-3.2.6.min.js"></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -29,15 +38,11 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div class="slideshow-container">
+      <img src="Images/lucifer.jpg" alt="" class="slideshow">
+      <img src="Images/Moneyheist.jpg" alt="" class="slideshow">
+      <img src="Images/the witcher.png" alt="" class="slideshow">
+      <img src="Images/Vikings.png" alt="" class="slideshow">
+  </div>
   </body>
 </html>

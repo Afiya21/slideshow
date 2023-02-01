@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
 
+// import Swal from 'sweetalert2/dist/sweetalert2.js'
+import Swal from 'sweetalert2'
+import "./App.css"
+
+
+let timerInterval
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+	
+  
+ 
 
-export default App;
+Swal.fire({
+	
+  
+  title: 'amazing job!',
+  html: 'next word is ',
+   
+  timer: 2000,
+  timerProgressBar: true,
+  
+  
+  didOpen: () => {
+    Swal.showLoading()
+    const b = Swal.getHtmlContainer().querySelector('b')
+    timerInterval = setInterval(() => {
+      b.textContent = Swal.getTimerLeft()
+    }, 100)
+ 
+  },
+  willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+  /* Read more about handling dismissals below */
+  if (result.dismiss === Swal.DismissReason.timer) {
+    console.log('I was closed by the timer')
+  }
+ 
+})
+
+}
+	
+
+export default App
